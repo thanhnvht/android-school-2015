@@ -1,5 +1,6 @@
 package com.elegion.githubclient.activity;
 
+import android.app.AlertDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -7,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.elegion.githubclient.R;
 import com.elegion.githubclient.adapter.RepositoriesAdapter;
@@ -55,6 +58,18 @@ public class MyRepositoriesActivity extends BaseActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onClick(View v) {
+        AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+        dlgAlert.setMessage("This is an alert with no consequence");
+        dlgAlert.setTitle("App Title");
+        dlgAlert.setPositiveButton("OK", null);
+        dlgAlert.setCancelable(true);
+        dlgAlert.create().show();
+
+        Button xxx = (Button) findViewById(R.id.buttonOk);
+        xxx.setText(R.string.abc);
     }
 
     private class GetRepositoriesTask extends AsyncTask<Void, Void, List<Repository>> {

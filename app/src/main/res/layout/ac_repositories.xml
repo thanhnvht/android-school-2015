@@ -8,7 +8,15 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/repositories_list"
-        android:layout_height="match_parent"
+        android:layout_height="458dp"
         android:layout_width="match_parent"
         android:scrollbarStyle="outsideOverlay"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:id="@+id/buttonOk"
+        android:onClick="onClick" />
 </LinearLayout>
